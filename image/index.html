@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-image: url('hero.jpg');  /* Add this line */
+                background-size: cover;  /* Cover the entire window */
+                background-repeat: no-repeat;  /* Don't repeat the image */
+                background-position: center;  /* Center the image */
+            }
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;       }
+
+        .shell {
+            position: relative;
+            min-width: 1000px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+            perspective: 900px;
+        }
+
+        .shell .box {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            transition: 0.3s;
+            overflow: hidden;
+            margin: 30px;
+            transform: rotateY(0deg);
+            transition-delay: .1s;
+            border-radius: 5px;
+            border: #fff 5px solid;
+        }
+
+       
+        .shell:hover .box {
+            transform: rotateY(20deg);
+        }
+
+       
+        .shell .box:hover {
+            transform: rotateY(0deg) scale(1.25);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+       
+        .shell .box:hover~.box {
+            transform: rotateY(-20deg);
+        }
+
+        .shell .box .images img {
+            width: 100%;
+        }
+
+        .shell .box .content {
+            position: absolute;
+            top: 0;
+            width: 90%;
+            height: 100%;
+            z-index: 999;
+            padding: 15px;
+        }
+
+        .shell .box .content h2 {
+            color: rgba(255, 240, 240, 0.955);
+            transition: 0.3s;
+            font-size: 20px;
+            transform: translateY(-100px);
+        }
+
+        .shell .box:hover .content h2 {
+            transform: translateY(-15px);
+        }
+
+        .shell .box .content p {
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+            font-size: 14px;
+            transform: translateY(600px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .shell .box:hover .content p {
+            transform: translateY(220px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="box">
+            <div class="images">
+                <img src="./image/1.png">
+            </div>
+            <div class="content">
+                <h2>Mona Lisa</h2>
+                <p>The "Mona Lisa" is painted by Leonardo da Vinci in the early 16th century. It's a cornerstone of the Italian Renaissance. The artwork is famous for its enigmatic expression.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="images">
+                <img src="./image/2.png">
+            </div>
+            <div class="content">
+                <h2>Marilyn Diptych</h2>
+                <p>The "Marilyn Diptych" is created by Andy Warhol in 1962. It's a seminal piece in the Pop Art movement. The artwork examines the themes of fame and media through vivid colors and repetitive imagery.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="images">
+                <img src="./image/3.png">
+            </div>
+            <div class="content">
+                <h2>Xiaolei Tian</h2>
+                <p>The "Myth" series is by Tian Xiaolei. As a virtual digital artist, Tian uses 3D technology and digital media to explore themes of mythology and modern identity.
+                </p>
+            </div>
+        </div>
+        
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
